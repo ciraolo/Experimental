@@ -27,7 +27,7 @@ module.exports = function(app) {
 
             newUser.save(function(err) {
               if (!err) {
-                res.redirect('./');
+                res.redirect('./profile');
               } else {
                 return next(err);
               }
