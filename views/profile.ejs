@@ -1,0 +1,24 @@
+<%- include('./partials/header') %>
+
+
+
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-6 text-center">
+      <p><em>Possiamo lamentarci perché i cespugli di rose hanno le spine, o gioire perché i cespugli spinosi hanno le rose.</em> 🌹</p>
+      <p class="small">Abramo Lincoln</p>
+      <div class="well">
+        <h3><span class="fa fa-user"></span> Profilo Utente:</h3>
+        <p><strong>id</strong>:<br/> <%= user._id %></p>
+        <p><strong>username</strong>:<br/> <%= user.local.username %></p>
+        <p><strong>password</strong>:<br/> <%= user.local.password %></p>
+        <p><strong>nome</strong>:<br/> <%= user.local.firstname %></p>
+        <p><strong>cognome</strong>:<br/> <%= user.local.lastname %></p>
+        <p><strong>ruolo</strong>:<br/> <%= user.local.role %></p>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <%- include('./partials/footer') %>
