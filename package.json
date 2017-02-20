@@ -9,6 +9,10 @@
   },
   "author": "Ciro",
   "license": "ISC",
+  "engines": {
+    "node": "6.9.4",
+    "npm": "4.1.1"
+  },
   "dependencies": {
     "bcrypt": "^1.0.2",
     "body-parser": "^1.16.1",
