@@ -27,7 +27,13 @@ module.exports = function(app) {
 
             newUser.save(function(err) {
               if (!err) {
-                res.redirect('./profile');
+                req.login(newUser, function(err) {
+                  if (!err) {
+                    return res.redirect('./profile');
+                  } else {
+                    return next(err);
+                  }
+                });
               } else {
                 return next(err);
               }
