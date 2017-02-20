@@ -25,7 +25,8 @@ var port = process.env.PORT || 3000;
 
 
 // DATABASE
-mongoose.connect(databaseConfig.url + databaseConfig.db);
+mongoose.connect(process.env.MONGOLAB_URI || databaseConfig.url);
+// mongoose.connect(databaseConfig.url + databaseConfig.db);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
